@@ -36,7 +36,8 @@ $result = $conn->query($sql);
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+           background-image: url(music-menu2.png);
+
         }
 
         h1 {
@@ -47,6 +48,7 @@ $result = $conn->query($sql);
         table {
             border-collapse: collapse;
             width: 100%;
+           background-color: #f5f5f5;
         }
 
         th, td {
@@ -56,7 +58,7 @@ $result = $conn->query($sql);
         }
 
         tr:hover {
-            background-color: #f5f5f5;
+            background-color: lightblue;
         }
 
         p {
@@ -69,6 +71,25 @@ $result = $conn->query($sql);
             color: #007bff;
             cursor: pointer;
         }
+
+    a.return-to-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.return-to-menu:hover {
+    background-color: #0056b3;
+}
+
+/* Center the link */
+p.return-to-menu-container {
+    text-align: center;
+}
     </style>
     <script>
         function toggleMainMenuLink() {
@@ -101,16 +122,12 @@ $result = $conn->query($sql);
         } else {
             echo "<tr><td colspan='5'>No records found</td></tr>";
         }
-        // Close database connection
        $conn->close();
        ?>
     </table>
 
-    <p><a href="index.php">Return to Main Menu</a></p>
-	
-// Close database connection
-$conn->close();
-?>
+    <p class="return-to-menu-container"><a class="return-to-menu" href="menu.php">Return to Main Menu</a></p>
+
 
 </body>
 </html>

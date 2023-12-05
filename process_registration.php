@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($stmt->execute()) {
                 echo "Registration successful! Welcome, $username!";
+                echo "<a href='login.php'>Login</a>";
                 // You can redirect the user to a login page or any other page
             } else {
                 echo "Error: " . $stmt->error;

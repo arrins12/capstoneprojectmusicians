@@ -39,7 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sssis", $artist, $song, $album, $year, $genre);
 
         if ($stmt->execute()) {
-            echo "Record added successfully";
+            echo "Record added successfully. <a href='menu.php'>Go to Home</a>";
+            
         } else {
             echo "Error adding record: " . $stmt->error;
         }

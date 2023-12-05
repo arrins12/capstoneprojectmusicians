@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $deleteStmt->execute();
 
         echo "Record with Artist '$artist' deleted successfully.";
+        echo "<a href='menu.php'>Go to Home</a>";
     } else {
         echo "Record with Artist '$artist' not found.";
     }

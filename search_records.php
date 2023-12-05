@@ -77,9 +77,18 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Search Records</title>
     <style>
+         body {
+            background-image: url('music-menu.png'); /* Replace 'your_image_path.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Optional: Set your preferred font-family */
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
+            background-color: #f5f5f5;
         }
 
         th, td {
@@ -104,6 +113,7 @@ $conn->close();
         label {
             display: block;
             margin-bottom: 8px;
+            background-color: floralwhite;
         }
 
         select, input[type="text"], input[type="submit"] {
@@ -122,6 +132,25 @@ $conn->close();
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        a.return-to-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.return-to-menu:hover {
+    background-color: #0056b3;
+}
+
+/* Center the link */
+p.return-to-menu-container {
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -141,5 +170,7 @@ $conn->close();
 
         <input type="submit" value="Search">
     </form>
+    <p class="return-to-menu-container"><a class="return-to-menu" href="menu.php">Return to Main Menu</a></p>
+
 </body>
 </html>
