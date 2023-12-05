@@ -69,16 +69,20 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Add Record</title>
     <style>
-        body {
+       body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('music-menu.png'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+           /* Set text color to white for better visibility */
         }
 
         h1 {
             text-align: center;
-            color: #333;
+            padding-top: 50px;
+            color:blue; /* Adjust as needed */
         }
 
         form {
@@ -111,6 +115,25 @@ $conn->close();
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        a.return-to-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.return-to-menu:hover {
+    background-color: #0056b3;
+}
+
+/* Center the link */
+p.return-to-menu-container {
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -133,6 +156,8 @@ $conn->close();
 
         <input type="submit" value="Add Record">
     </form>
+    <p class="return-to-menu-container"><a class="return-to-menu" href="menu.php">Return to Main Menu</a></p>
+
 </body>
 </html>
 

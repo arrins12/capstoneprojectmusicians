@@ -71,7 +71,7 @@ function sanitize_input($input) {
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-image:url(music-menu.png);
             margin: 0;
             padding: 0;
             display: flex;
@@ -108,6 +108,11 @@ function sanitize_input($input) {
             color: red;
             margin-bottom: 16px;
         }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 0; /* Add margin at the top */
+        }
     </style>
     <script>
         function validateForm() {
@@ -124,6 +129,7 @@ function sanitize_input($input) {
     </script>
 </head>
 <body>
+
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validateForm()">
         <h2>User Login</h2>
         <?php if (!empty($error)) : ?>

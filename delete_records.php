@@ -64,12 +64,13 @@ $conn->close();
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url(music-menu2.png);
         }
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #dc3545;
+            margin-top: 200px;
         }
 
         form {
@@ -79,6 +80,7 @@ $conn->close();
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
         }
 
         label {
@@ -102,6 +104,25 @@ $conn->close();
         input[type="submit"]:hover {
             background-color: #c82333;
         }
+
+    a.return-to-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.return-to-menu:hover {
+    background-color: #c82333;
+}
+
+/* Center the link */
+p.return-to-menu-container {
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -112,5 +133,6 @@ $conn->close();
 
         <input type="submit" value="Delete">
     </form>
+    <p class="return-to-menu-container"><a class="return-to-menu" href="menu.php">Return to Main Menu</a></p>
 </body>
 </html>

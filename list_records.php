@@ -42,7 +42,7 @@ $result = $conn->query($sql);
 
         h1 {
             text-align: center;
-            color: #333;
+            color: blue;
         }
 
         table {

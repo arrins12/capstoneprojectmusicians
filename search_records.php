@@ -97,8 +97,10 @@ $conn->close();
             border-bottom: 1px solid #ddd;
         }
 
-        h2 {
-            margin-top: 20px;
+        h1 {
+            margin-bottom: 80px;
+            margin-left: 650px;
+            color:blue;
         }
 
         form {

@@ -22,12 +22,17 @@ if (isset($_GET["logout"])) {
 	<title>Music Database Menu</title>
 	<style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image:url(music-menu.png) ;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(music-menu.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    height: 100vh; /* Ensure the menu takes the full height of the viewport */
+}
 
-        }
 
         h1 {
             text-align: center;
@@ -40,6 +45,7 @@ if (isset($_GET["logout"])) {
             padding: 0;
             overflow: hidden;
             background-color: #333;
+            
         }
 
         li {
